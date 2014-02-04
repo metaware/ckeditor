@@ -2,6 +2,7 @@ require 'rails/generators'
 require 'rails/generators/migration'
 
 module Ckeditor
+  module Rails
   module Generators
     class InstallGenerator < Rails::Generators::Base
       include Rails::Generators::Migration
@@ -78,6 +79,7 @@ module Ckeditor
         def backend
           options[:backend] || "paperclip"
         end
+    end
     end
   end
 end
